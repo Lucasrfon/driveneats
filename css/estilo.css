@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+}
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+}
+h2 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #333333;
+}
+.topo {
+    background-color: #CF2B2B;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 5px 5px 3px rgb(182, 180, 180);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.topo p {
+    font-size: 18px;
+    font-weight: 400;
+}
+.container {
+    margin: 150px 0px;    
+}
+.base {
+    width: 100%;
+    background-color: #ffffff;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.base div {
+    background-color: #cbcbcb;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 60px;
+}

@@ -5,6 +5,8 @@ let preçoBebida;
 let nomeSobremesa;
 let preçoSobremesa;
 let total;
+let nome;
+let endereço
 
 function seletorPrato(prato) {
     let itemEscolhido = document.querySelector(".prato").querySelector(".escolhido")
@@ -67,5 +69,12 @@ function seletorSobremesa(sobremesa) {
 
 function fechar() {
     total = Number(preçoPrato) + Number(preçoBebida) + Number(preçoSobremesa)
-    alert(total.toFixed(2))
+    nome = prompt("Qual o seu nome?")
+    endereço = prompt("Qual o endereço de entrega?")
+    alert(nomePrato)
+    alert(nomeBebida)
+    alert(nomeSobremesa)
+    alert(nome)
+    alert(endereço)
+    alert(Number(total.toFixed(2))
 }

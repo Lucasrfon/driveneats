@@ -71,10 +71,14 @@ function fechar() {
     total = Number(preçoPrato) + Number(preçoBebida) + Number(preçoSobremesa)
     nome = prompt("Qual o seu nome?")
     endereço = prompt("Qual o endereço de entrega?")
-    alert(nomePrato)
-    alert(nomeBebida)
-    alert(nomeSobremesa)
-    alert(nome)
-    alert(endereço)
-    alert(Number(total.toFixed(2))
+    let texto = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+- Prato: ${nomePrato}
+- Bebida: ${nomeBebida}
+- Sobremesa: ${nomeSobremesa}
+Total: R$ ${Number(total.toFixed(2))}
+        
+Nome: ${nome}
+Endereço: ${endereço}`);
+    
+    window.open(`https://wa.me/5571987550934?text=${texto}`)
 }

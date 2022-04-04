@@ -125,10 +125,3 @@ h4 {
 .escondido {
     display: none;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.confirmar {
-    display: none;
-}

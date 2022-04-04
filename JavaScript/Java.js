@@ -67,15 +67,26 @@ function seletorSobremesa(sobremesa) {
     }
 }
 
+function confirmar() {
+    document.querySelector(".confirmar").classList.remove("escondido")
+    document.querySelector(".caixa").querySelector(".prato").innerText = nomePrato
+    document.querySelector(".caixa").querySelector(".rsprato").innerText = `R$ ${preçoPrato.replace(".", ",")}`
+    document.querySelector(".caixa").querySelector(".bebida").innerText = nomeBebida
+    document.querySelector(".caixa").querySelector(".rsbebida").innerText = `R$ ${preçoBebida.replace(".", ",")}`
+    document.querySelector(".caixa").querySelector(".sobremesa").innerText = nomeSobremesa
+    document.querySelector(".caixa").querySelector(".rssobremesa").innerText = `R$ ${preçoSobremesa.replace(".", ",")}`
+    total =`R$ ${Number(preçoPrato) + Number(preçoBebida) + Number(preçoSobremesa)}`.replace(".", ",")
+    document.querySelector(".caixa").querySelector(".total").innerText = total
+}
+
 function fechar() {
-    total = Number(preçoPrato) + Number(preçoBebida) + Number(preçoSobremesa)
     nome = prompt("Qual o seu nome?")
     endereço = prompt("Qual o endereço de entrega?")
     let texto = encodeURIComponent(`Olá, gostaria de fazer o pedido:
 - Prato: ${nomePrato}
 - Bebida: ${nomeBebida}
 - Sobremesa: ${nomeSobremesa}
-Total: R$ ${Number(total.toFixed(2))}
+Total: ${total}
         
 Nome: ${nome}
 Endereço: ${endereço}`);

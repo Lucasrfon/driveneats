@@ -122,6 +122,53 @@ h4 {
     justify-content: center;
     align-items: center;
 }
+.confirmar {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caixa {
+    background-color: #50D074;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 22px;
+    width: 90%;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px lightgray;
+}
+.lista {
+    margin-top: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+.elementos div {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.botao {
+    border-radius: 30px;
+    width: 80%;
+    background-color: #ffffff;
+    color: #50D074;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+}
 .escondido {
     display: none;
 }

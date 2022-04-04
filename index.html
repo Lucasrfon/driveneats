@@ -123,8 +123,31 @@
             <p>Selecione os 3 itens</p>
             <p>para fechar o pedido</p>
         </div>
-        <div class="fechado escondido" onclick="fechar()">
+        <div class="fechado escondido" onclick="confirmar()">
             <p>Fechar pedido</p>
+        </div>
+    </div>
+    <div class="confirmar escondido">
+        <div class="caixa">
+            <p>Confirme seu pedido</p>
+            <div class="lista">
+                <div class="elementos">
+                    <div class="prato"></div>
+                    <div class="bebida"></div>
+                    <div class="sobremesa"></div>
+                    <p>TOTAL</p>
+                </div>
+                <div class="elementos">
+                    <div class="rsprato"></div>
+                    <div class="rsbebida"></div>
+                    <div class="rssobremesa"></div>
+                    <p class="total"></p>
+                </div>
+            </div>
+            <div class="botao" onclick="fechar()">
+                <p>Tudo certo, pode pedir!</p>
+            </div>
+            <p>Cancelar</p>
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

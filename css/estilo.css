@@ -47,7 +47,7 @@ h4 {
     margin: 130px 0px 120px 0px;
     padding: 0px 15px;   
 }
-.classes {
+.container > div {
     margin-top: 30px;
 }
 .itens {

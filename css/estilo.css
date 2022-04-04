@@ -108,9 +108,6 @@ h4 {
 .escolhido {
     border: 5px solid #32B72F;
 }
-.escondido {
-    display: none;
-}
 .fechado {
     background-color: #32B72F;
     border-radius: 30px;
@@ -124,5 +121,14 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.escondido {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.confirmar {
     display: none;
 }

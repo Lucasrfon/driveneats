@@ -1,3 +1,11 @@
+let nomePrato;
+let preçoPrato;
+let nomeBebida;
+let preçoBebida;
+let nomeSobremesa;
+let preçoSobremesa;
+let total;
+
 function seletorPrato(prato) {
     let itemEscolhido = document.querySelector(".prato").querySelector(".escolhido")
 
@@ -7,6 +15,14 @@ function seletorPrato(prato) {
     }
     prato.classList.add("escolhido");
     prato.querySelector("ion-icon").classList.remove("escondido")
+    nomePrato = prato.querySelector("h3").innerText
+    preçoPrato = prato.querySelector("h4").innerText.replace(",", ".")
+    preçoPrato = preçoPrato.replace("R$ ", "")
+
+    if (nomePrato && nomeBebida && nomeSobremesa) {
+        document.querySelector(".aberto").classList.add("escondido")
+        document.querySelector(".fechado").classList.remove("escondido")
+    }
 }
 
 function seletorBebida(bebida) {
@@ -18,6 +34,15 @@ function seletorBebida(bebida) {
     }
     bebida.classList.add("escolhido");
     bebida.querySelector("ion-icon").classList.remove("escondido")
+    nomeBebida = bebida.querySelector("h3").innerText
+    preçoBebida = bebida.querySelector("h4").innerText
+    preçoBebida = bebida.querySelector("h4").innerText.replace(",", ".")
+    preçoBebida = preçoBebida.replace("R$ ", "")
+
+    if (nomePrato && nomeBebida && nomeSobremesa) {
+        document.querySelector(".aberto").classList.add("escondido")
+        document.querySelector(".fechado").classList.remove("escondido")
+    }
 }
 
 function seletorSobremesa(sobremesa) {
@@ -29,5 +54,18 @@ function seletorSobremesa(sobremesa) {
     }
     sobremesa.classList.add("escolhido");
     sobremesa.querySelector("ion-icon").classList.remove("escondido")
+    nomeSobremesa = sobremesa.querySelector("h3").innerText
+    preçoSobremesa = sobremesa.querySelector("h4").innerText
+    preçoSobremesa = sobremesa.querySelector("h4").innerText.replace(",", ".")
+    preçoSobremesa = preçoSobremesa.replace("R$ ", "")
+
+    if (nomePrato && nomeBebida && nomeSobremesa) {
+        document.querySelector(".aberto").classList.add("escondido")
+        document.querySelector(".fechado").classList.remove("escondido")
+    }
 }
 
+function fechar() {
+    total = Number(preçoPrato) + Number(preçoBebida) + Number(preçoSobremesa)
+    alert(total.toFixed(2))
+}
